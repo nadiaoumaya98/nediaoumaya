@@ -2,9 +2,9 @@ pipeline {
 
     environment { 
 
-        registry = "aymenca/image" 
+        registry = "nadia9888/docimage" 
 
-        registryCredential = 'aymemm' 
+        registryCredential = 'nadiaoumaya' 
 
         dockerImage = '' 
 
@@ -116,15 +116,7 @@ pipeline {
 
         } 
 
-        stage('Cleaning up') { 
-
-            steps { 
-
-                sh "docker rmi $registry:$BUILD_NUMBER" 
-
-            }
-
-        } 
+      
 
     }
 
