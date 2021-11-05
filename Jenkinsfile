@@ -18,9 +18,8 @@ pipeline {
              stage( 'Checkout  GIT' ){
                        steps{
                           echo 'Pulling ... ';
-                              git branch:  'main' ,
-                              url :'https://github.com/aymenmelki/Timesheet'
-                              }
+                              git branch:  'master' ,
+                              url :'https://github.com/nadiaoumaya98/nediaoumaya'
                     }
 
             stage("Test,Build"){
