@@ -21,6 +21,7 @@ pipeline {
                               git branch:  'master' ,
                               url :'https://github.com/nadiaoumaya98/nediaoumaya'
                     }
+             }
 
             stage("Test,Build"){
                steps{
