@@ -11,6 +11,8 @@ import java.util.List;
 
 import org.junit.Assert;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.services.IEntrepriseService;
@@ -22,7 +24,8 @@ public class DepartementTest {
 	@Autowired
 	IEntrepriseService it;
 
-	
+		private static final Logger LOGGER = LogManager.getLogger(DepartementTest.class);
+
 	
 	@Test
 	public void testAjouterDepartement()
@@ -31,6 +34,7 @@ public class DepartementTest {
 		Departement dep = new Departement( "Info");
 		int c= it.ajouterDepartement(dep);
 		assertThat(c).isGreaterThan(0);
+		LOGGER.info("Added successfully with");
 		Assert.assertTrue(c>0);
 }
 	@Test
