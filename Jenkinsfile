@@ -13,11 +13,7 @@ pipeline {
     agent any 
 
     stages { 
-        stage('email'){
-			steps{
-			mail bcc: '', body: 'build_success', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'nadia.oumaya2@aiesec.net'
-			}
-		}
+       
        
 
              stage( 'Checkout  GIT' ){
@@ -126,7 +122,11 @@ pipeline {
                 bat "docker rmi $registry:$BUILD_NUMBER"
                     }
                 }
-   
+    stage('email'){
+			steps{
+			mail bcc: '', body: 'chaine complete', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'nadia.oumaya2@aiesec.net'
+			}
+		}
     }
 
 }
