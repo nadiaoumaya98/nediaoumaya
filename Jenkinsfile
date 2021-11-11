@@ -15,7 +15,7 @@ pipeline {
     stages { 
         stage('email'){
 			steps{
-			mail bcc: '', body: 'build_success', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'nadia.oumaya@esprit.tn'
+			mail bcc: '', body: 'build_success', cc: '', from: '', replyTo: '', subject: 'jenkins', to: 'nadia.oumaya2@aiesec.net'
 			}
 		}
        
